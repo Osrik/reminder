@@ -18,10 +18,14 @@ Options:
 from docopt import docopt
 
 
+def add_record(what, where):
+    print('Chci si uložit {} {}'.format(what, where))
+
+
 def main(args):
-    print("Ted už pracuju")
-    print(args)
-    pass
+
+    if args['add']:
+        add_record(args['<what>'], args['<where>'])
 
 
 if __name__ == '__main__':
